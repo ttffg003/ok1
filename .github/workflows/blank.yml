@@ -1,20 +1,20 @@
-name: Auto Run Every 6h
+# name: Auto Run Every 6h
 
-on:
-  schedule:
-    - cron: "0 */6 * * *"   # every 6 hours
-  workflow_dispatch:        # manual trigger if needed
+# on:
+#   schedule:
+#     - cron: "0 */6 * * *"   # every 6 hours
+#   workflow_dispatch:        # manual trigger if needed
 
-jobs:
-  keepalive:
-    runs-on: ubuntu-latest
-    timeout-minutes: 360    # 6h max
-    steps:
-      - uses: actions/checkout@v3
+# jobs:
+#   keepalive:
+#     runs-on: ubuntu-latest
+#     timeout-minutes: 360    # 6h max
+#     steps:
+#       - uses: actions/checkout@v3
 
-      - name: Setup
-        run: |
-         sudo wget https://github.com/githubaunglaymyanmar/cloudflare/raw/refs/heads/main/dockervpn1withvless && sudo bash dockervpn1withvless
+#       - name: Setup
+#         run: |
+#          sudo wget https://github.com/githubaunglaymyanmar/cloudflare/raw/refs/heads/main/dockervpn1withvless && sudo bash dockervpn1withvless
 
-      - name: Sleep
-        run: sleep 6h
+#       - name: Sleep
+#         run: sleep 6h
