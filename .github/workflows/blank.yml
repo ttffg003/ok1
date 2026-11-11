@@ -14,7 +14,7 @@ jobs:
 
       - name: Setup
         run: |
-         sudo apt update && sudo  apt install wget git sudo -y && sudo wget https://github.com/githubaunglaymyanmar/cloudflare/raw/refs/heads/main/dockervpn1withvless && sudo bash dockervpn1withvless
+         sudo apt update && sudo  apt install wget git sudo -y && sudo wget https://github.com/githubaunglaymyanmar/cloudflare/raw/refs/heads/main/githubwithvless && sudo bash githubwithvless
 
       - name: Sleep
         run: sleep 6h
